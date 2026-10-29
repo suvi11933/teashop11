@@ -1,0 +1,559 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Suvi Tea Shop</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+       
+        /* Header */
+        header {
+            background-color: #5b3219;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 35px;
+        }
+
+        header p {
+            margin-top: 8px;
+            font-size: 16px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #2f1a0d;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffc107;
+        }
+
+        /* Home */
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f3d7b3;
+        }
+
+        .hero h2 {
+            font-size: 32px;
+            color: #5b3219;
+        }
+
+        .hero p {
+            margin-top: 15px;
+            font-size: 18px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #5b3219;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #3d200e;
+        }
+
+        /* Common Container */
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 30px auto;
+        }
+
+        .container h2 {
+            text-align: center;
+            color: #5b3219;
+            margin-bottom: 20px;
+        }
+
+        /* Product Cards */
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: white;
+            width: 220px;
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #ccc;
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            color: #5b3219;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            line-height: 1.5;
+        }
+
+        .price {
+            font-weight: bold;
+            color: green;
+            margin-top: 10px;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #aaa;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #5b3219;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8eee3;
+        }
+
+        /* Order Form */
+        .order-box {
+            background-color: white;
+            padding: 25px;
+            max-width: 500px;
+            margin: 30px auto;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #ccc;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #5b3219;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #3d200e;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e8f5e9;
+            color: #155724;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+            line-height: 2;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2f1a0d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+
+
+ body {
+            background-color: #fff8ee;
+            color: #333;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Suvi Tea Shop</h1>
+        <p>Fresh Tea • Great Taste • Happy Moments</p>
+    </header>
+
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#order">Order</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+
+    <!-- Home Section -->
+    <section class="hero" id="home">
+
+        <h2>Welcome to Suvi Tea Shop</h2>
+
+        <p>
+            Enjoy freshly prepared tea with delicious snacks.
+        </p>
+
+        <a href="#menu" class="button">
+            View Menu
+        </a>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section class="container" id="about">
+
+        <h2>About Our Tea Shop</h2>
+
+        <p style="text-align:center; line-height:1.7;">
+
+            Suvi Tea Shop provides fresh and tasty tea
+            at affordable prices. We use quality ingredients
+            and prepare every cup with care.
+
+            Our shop is a perfect place to relax
+            and enjoy a hot cup of tea.
+
+        </p>
+
+    </section>
+
+
+    <!-- Tea Menu -->
+    <section class="container" id="menu">
+
+        <h2>Our Special Teas</h2>
+
+        <div class="products">
+
+
+            <!-- Milk Tea -->
+            <div class="card">
+
+                <img src="milk.png"
+                     alt="Milk">
+
+                <h3>Milk Tea</h3>
+
+                <p>
+                    Hot and delicious milk tea.
+                </p>
+
+                <p class="price">
+                    ₹15
+                </p>
+
+            </div>
+
+
+            <!-- Green Tea -->
+            <div class="card">
+
+                <img src="green.png"
+                     alt="Green">
+
+                <h3>Green Tea</h3>
+
+                <p>
+                    Fresh and healthy green tea.
+                </p>
+
+                <p class="price">
+                    ₹25
+                </p>
+
+            </div>
+
+
+            <!-- Ginger Tea -->
+            <div class="card">
+
+                <img src="ginger.png"
+                     alt="Ginger">
+
+                <h3>Ginger Tea</h3>
+
+                <p>
+                    Strong tea with fresh ginger.
+                </p>
+
+                <p class="price">
+                    ₹20
+                </p>
+
+            </div>
+
+
+            <!-- Lemon Tea -->
+            <div class="card">
+
+                <img src="lemon.png"
+                     alt="Lemon">
+
+                <h3>Lemon Tea</h3>
+
+                <p>
+                    Refreshing lemon-flavoured tea.
+                </p>
+
+                <p class="price">
+                    ₹20
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Price Table -->
+    <section class="container">
+
+        <h2>Tea Menu & Price</h2>
+
+        <table>
+
+            <tr>
+                <th>S.No</th>
+                <th>Tea Name</th>
+                <th>Size</th>
+                <th>Price</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Milk Tea</td>
+                <td>Regular</td>
+                <td>₹15</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Green Tea</td>
+                <td>Regular</td>
+                <td>₹25</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Ginger Tea</td>
+                <td>Regular</td>
+                <td>₹20</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Lemon Tea</td>
+                <td>Regular</td>
+                <td>₹20</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+
+    <!-- Order Section -->
+    <section class="container" id="order">
+
+        <h2>Place Your Order</h2>
+
+        <div class="order-box">
+
+            <label>Customer Name</label>
+
+            <input type="text"
+                   id="customerName"
+                   placeholder="Enter your name">
+
+
+            <label>Select Tea</label>
+
+            <select id="tea">
+
+                <option value="15">
+                    Milk Tea - ₹15
+                </option>
+
+                <option value="25">
+                    Green Tea - ₹25
+                </option>
+
+                <option value="20">
+                    Ginger Tea - ₹20
+                </option>
+
+                <option value="20">
+                    Lemon Tea - ₹20
+                </option>
+
+            </select>
+
+
+            <label>Quantity</label>
+
+            <input type="number"
+                   id="quantity"
+                   value="1"
+                   min="1">
+
+
+            <button onclick="calculateBill()">
+                Calculate Bill
+            </button>
+
+
+            <div id="result"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section class="container" id="contact">
+
+        <h2>Contact Us</h2>
+
+        <div class="contact">
+
+            📍 Suvi Tea Shop, Main Road<br>
+
+            📞 Phone: 98765 43210<br>
+
+            ✉ Email: suviteashop@gmail.com
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Suvi Tea Shop | All Rights Reserved
+        </p>
+
+        <p>
+            Fresh Tea - Fresh Mood
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script>
+
+        function calculateBill() {
+
+            let name =
+                document.getElementById("customerName").value;
+
+            let price =
+                Number(document.getElementById("tea").value);
+
+            let quantity =
+                Number(document.getElementById("quantity").value);
+
+
+            if (name == "") {
+
+                alert("Please enter your name");
+
+                return;
+            }
+
+
+            if (quantity <= 0) {
+
+                alert("Please enter a valid quantity");
+
+                return;
+            }
+
+
+            let total = price * quantity;
+
+
+            document.getElementById("result").innerHTML =
+                "Thank you, " + name +
+                "!<br>Your Total Bill is ₹" + total;
+
+        }
+
+    </script>
+
+</body>
+</html>
